@@ -18,9 +18,9 @@ export default function WorkOrders() {
     cuttingCharge: "",
   });
 
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<any>({});
 
-  const update = (changes) => {
+  const update = (changes: any) => {
     setState((prev) => ({ ...prev, ...changes }));
     setErrors({});
   };
@@ -69,7 +69,7 @@ export default function WorkOrders() {
             <NumberInput
               label="Parent Length"
               value={state.parentLength}
-              onChange={(e) => update({ parentLength: e.target.value })}
+              onChange={(e: any) => update({ parentLength: e.target.value })}
               placeholder="Enter parent length"
               required
               autoFocus
@@ -78,7 +78,7 @@ export default function WorkOrders() {
             <NumberInput
               label="Parent Width"
               value={state.parentWidth}
-              onChange={(e) => update({ parentWidth: e.target.value })}
+              onChange={(e: any) => update({ parentWidth: e.target.value })}
               placeholder="Enter parent width"
               required
             />
@@ -86,7 +86,7 @@ export default function WorkOrders() {
             <NumberInput
               label="Parent Sheet Cost"
               value={state.parentCost}
-              onChange={(e) => update({ parentCost: e.target.value })}
+              onChange={(e: any) => update({ parentCost: e.target.value })}
               placeholder="Enter cost per parent sheet"
               prefix="$"
             />
@@ -100,7 +100,7 @@ export default function WorkOrders() {
             <NumberInput
               label="Cut Length"
               value={state.cutLength}
-              onChange={(e) => update({ cutLength: e.target.value })}
+              onChange={(e: any) => update({ cutLength: e.target.value })}
               placeholder="Enter cut length"
               required
             />
@@ -108,7 +108,7 @@ export default function WorkOrders() {
             <NumberInput
               label="Cut Width"
               value={state.cutWidth}
-              onChange={(e) => update({ cutWidth: e.target.value })}
+              onChange={(e: any) => update({ cutWidth: e.target.value })}
               placeholder="Enter cut width"
               required
             />
@@ -122,7 +122,7 @@ export default function WorkOrders() {
             <NumberInput
               label="Target Quantity"
               value={state.goal}
-              onChange={(e) => update({ goal: e.target.value })}
+              onChange={(e: any) => update({ goal: e.target.value })}
               placeholder="Enter target quantity"
               suffix="pieces"
               step="1"
@@ -131,7 +131,7 @@ export default function WorkOrders() {
             <NumberInput
               label="Cutting Charge"
               value={state.cuttingCharge}
-              onChange={(e) => update({ cuttingCharge: e.target.value })}
+              onChange={(e: any) => update({ cuttingCharge: e.target.value })}
               placeholder="Enter cutting charge"
               prefix="$"
             />
